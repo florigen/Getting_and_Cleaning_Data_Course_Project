@@ -55,5 +55,5 @@ mean_std <- all %>% select(activityId, activityType,subjectId,  contains('mean()
 # summarise all vriable means for each subject and activity
 final <- mean_std %>% group_by(subjectId,activityId,activityType) %>% summarise_all(mean)
 
-
+# write result to file
 write.table(final, "secTidySet.txt", row.name=FALSE)
