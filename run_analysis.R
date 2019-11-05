@@ -1,10 +1,5 @@
 library(tidyverse)
 
-x_train <- read.table("./data/UCI HAR Dataset/train/X_train.txt")
-y_train <- read.table("./data/UCI HAR Dataset/train/y_train.txt")
-subject_train <- read.table("./data/UCI HAR Dataset/train/subject_train.txt")
-
-
 # read training data
 x_train       <- read_table('data/train/X_train.txt', col_names = F, col_types = cols( .default = col_double()))
 y_train       <- read_table('data/train/y_train.txt', col_names = F, col_types = cols( .default = col_double()))
